@@ -1,0 +1,19 @@
+environment
+cave
+castle
+volcano
+iceberg
+dungeon
+cloud
+
+creator
+abberation
+cultists
+forgotten empire
+natural causes
+
+treasure
+gold
+artifacts
+ancient lore
+happiness
