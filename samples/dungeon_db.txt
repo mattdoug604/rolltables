@@ -1,0 +1,122 @@
+cults and religious groups
+Demon-worshiping cult,1
+Devil-worshiping cult,1
+Elemental Air cult,2
+Elemental Earth cult,2
+Elemental Fire cult,2
+Elemental Water cult,2
+Worshipers of an evil deity,3
+Worshipers of a good deity,3
+Worshipers of a neutral deity,3
+
+dungeon creator
+Beholder,1
+{cults and religious groups},3
+Dwarves,3
+Elves (including drow),1
+Giants,1
+Hobgoblins,1
+Humans ({alignment} {class}),3
+Kuo-toa,1
+Lich,1
+Mind flayers,1
+Yuan-ti,1
+Natural caverns,1
+
+dungeon history
+Abandoned by creators,3
+Abandoned due to plague,1
+Conquered by invaders,4
+Creators destroyed by attacking raiders,2
+Creators destroyed by discovery made within the site,1
+Creators destroyed by internal conflict,1
+Creators destroyed by magical catastrophe,1
+Creators destroyed by natural disaster,2
+Location cursed by the gods and shunned,1
+Original creator still in control,3
+Overrun by planar creatures,1
+Site of a great miracle,1
+
+dungeon location
+A building in a city
+Catacombs or sewers beneath a city
+Beneath a farmhouse
+Beneath a graveyard
+Beneath a ruined castle
+Beneath a ruined city
+Beneath a temple
+In a chasm
+In a cliff face
+In a desert
+In a forest
+In a glacier
+In a gorge
+In a jungle
+In a mountain pass
+In a swamp
+Beneath or on top of a mesa
+In sea caves
+In several connected mesas
+On a mountain peak
+On a promontory
+On an island
+Underwater
+{exotic location}
+
+dungeon purpose
+Death trap,1
+Lair,4
+Maze,1
+Mine,3
+Planar gate,1
+Stronghold,4
+Temple or shrine,3
+Tomb,2
+Treasure vault,1
+
+exotic location
+Among the branches of a tree
+Around a geyser
+Behind a waterfall
+Buried in an avalanche
+Buried in a sandstorm
+Buried in volcanic ash
+Castle or structure sunken in a swamp
+Castle or structure at the bottom of a sinkhole
+Floating on the sea
+In a meteorite
+On a demiplane or in a pocket dimension
+In an area devastated by a magical catastrophe
+On a cloud
+In the Feywild
+In the Shadowfell
+On an island in an underground sea
+In a volcano
+On the back of a Gargantuan living creature
+Sealed inside a magical dome of force
+Inside a Mordenkainen’s magnificent mansion
+
+alignment
+Lawful Good
+Neutral Good
+Chaotic Good
+Lawful Neutral
+Neutral
+Chaotic Neutral
+Lawful Evil
+Neutral Evil
+Chaotic Evil
+
+class
+Barbarian,1
+Bard,1
+Cleric,2
+Druid,1
+Fighter,2
+Monk,1
+Paladin,1
+Ranger,1
+Rogue,4
+Sorcerer,1
+Warlock,1
+Wizard,4
