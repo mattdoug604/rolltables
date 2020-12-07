@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Dict, Tuple
 
 from .database import Choice, Database, Table
 
@@ -15,8 +15,8 @@ def load(filepath: str, sep="|") -> Database:
         if line and table_name is None:
             table_name = line
         elif line and table_name:
-            value, weight = _split(line, sep)
-            choice = Choice(value, weight=weight)
+            value, weight, exclude = _split(line, sep)
+            choice = Choice(value, weight=weight, exclude=exclude)
             choices.append(choice)
         elif not line and table_name:
             table = Table(table_name, choices)
@@ -46,12 +46,21 @@ def _iter(filepath: str):
                 yield None
 
 
-def _split(string: str, sep="|") -> Tuple[str, float]:
-    temp = [i.strip() for i in string.split(sep)][:2]
+def _split(string: str, sep="|") -> Tuple[str, float, Dict]:
+    temp = [i.strip() for i in string.split(sep)][:3]
     value = str(temp[0])
     try:
-        weight = float(temp[1])
+        if temp[1]:
+            weight = float(temp[1])
+        else:
+            weight = 1.0
     except IndexError:
         weight = 1.0
 
-    return value, weight
+    try:
+        key, val = temp[2].split(":", 1)
+        exclude = {key: val}
+    except IndexError:
+        exclude = {}
+
+    return value, weight, exclude
