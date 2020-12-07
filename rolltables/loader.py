@@ -3,7 +3,7 @@ from typing import Tuple
 from .database import Choice, Database, Table
 
 
-def load(filepath: str) -> Database:
+def load(filepath: str, sep="|") -> Database:
     choice = None
     choices = []
     table_name = None
@@ -15,7 +15,7 @@ def load(filepath: str) -> Database:
         if line and table_name is None:
             table_name = line
         elif line and table_name:
-            value, weight = _split(line)
+            value, weight = _split(line, sep)
             choice = Choice(value, weight=weight)
             choices.append(choice)
         elif not line and table_name:
@@ -46,8 +46,8 @@ def _iter(filepath: str):
                 yield None
 
 
-def _split(string: str) -> Tuple[str, float]:
-    temp = [i.strip() for i in string.split(",")][:2]
+def _split(string: str, sep="|") -> Tuple[str, float]:
+    temp = [i.strip() for i in string.split(sep)][:2]
     value = str(temp[0])
     try:
         weight = float(temp[1])
