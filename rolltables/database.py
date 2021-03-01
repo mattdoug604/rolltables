@@ -41,15 +41,18 @@ class Database:
         self._excluded: Dict[str, List[str]] = {}
 
     def query(self, format_string: str, _checked: List[str] = []) -> str:
-        substring = {}
+        substring = []
         for table_name in Formatter.get_field_names(format_string):
             table = self._get_table(table_name)
             exclude = self._excluded.get("table_name", [])
             choice = table.roll(exclude)
             for key, val in choice.exclude.items():
                 self._excluded.setdefault(key, []).append(val)
-            substring[table_name] = self.query(choice.value, _checked)
-        return format_string.format(**substring)
+            substring.append(self.query(choice.value, _checked))
+
+        re_string = Formatter.remove_field_names(format_string)
+        final_string = re_string.format(*substring)
+        return final_string
 
     def _get_table(self, table_name: str) -> Table:
         tables = [table for table in self.tables if table.name == table_name]
