@@ -12,5 +12,5 @@ def main():
 
     database = load(database_file)
     with open(file_to_format, "r") as fh:
-        format_string = fh.read()
+        format_string = fh.read().rstrip()
         print(database.query(format_string))
