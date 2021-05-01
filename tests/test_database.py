@@ -1,6 +1,6 @@
 import pytest
 
-from rolltables.database import Choice, Table, Database
+from rolltables.database import Choice, Database, Table
 
 
 class TestTable:
