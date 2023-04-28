@@ -35,12 +35,12 @@ class Database:
         self.tables = tables
 
     def query(self, format_string: str, _checked: List[str] = []) -> str:
-        substring = {}
+        replacements = []
         for table_name in Formatter.get_field_names(format_string):
             table = self._get_table(table_name)
             value = table.roll()
-            substring[table_name] = self.query(value, _checked)
-        return format_string.format(**substring)
+            replacements.append(self.query(value, _checked))
+        return Formatter.format(format_string, *replacements)
 
     def _get_table(self, table_name: str) -> Table:
         tables = [table for table in self.tables if table.name == table_name]

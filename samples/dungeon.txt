@@ -1,4 +1,50 @@
+Setting and Background
 Dungeon Location: {dungeon location}
 Dungeon Creator:  {dungeon creator}
 Dungeon Purpose:  {dungeon purpose}
 Dungeon History:  {dungeon history}
+
+Encounter #1
+Goal:         {encounter goal}
+Adversary:    {encounter adversary}
+Environment:  {encounter environment}
+Compilcation: {encounter complication}
+Highlight:    {encounter highlight}
+Surprise:     {encounter surprise}
+Reward:       {encounter reward}
+
+Encounter #2
+Goal:         {encounter goal}
+Adversary:    {encounter adversary}
+Environment:  {encounter environment}
+Compilcation: {encounter complication}
+Highlight:    {encounter highlight}
+Surprise:     {encounter surprise}
+Reward:       {encounter reward}
+
+Encounter #3
+Goal:         {encounter goal}
+Adversary:    {encounter adversary}
+Environment:  {encounter environment}
+Compilcation: {encounter complication}
+Highlight:    {encounter highlight}
+Surprise:     {encounter surprise}
+Reward:       {encounter reward}
+
+Encounter #4
+Goal:         {encounter goal}
+Adversary:    {encounter adversary}
+Environment:  {encounter environment}
+Compilcation: {encounter complication}
+Highlight:    {encounter highlight}
+Surprise:     {encounter surprise}
+Reward:       {encounter reward}
+
+Encounter #5
+Goal:         {encounter goal}
+Adversary:    {encounter adversary}
+Environment:  {encounter environment}
+Compilcation: {encounter complication}
+Highlight:    {encounter highlight}
+Surprise:     {encounter surprise}
+Reward:       {encounter reward}

@@ -120,3 +120,63 @@ Rogue,4
 Sorcerer,1
 Warlock,1
 Wizard,4
+
+encounter goal
+Escape from the encounter
+Rescue a creature
+Survive an attack
+Defend a target
+Obtain an item
+Kill an enemy
+Pacify a conflict
+Solve a puzzle
+
+encounter adversary
+Enemy (e.g. bandit necromancer cultist)
+Environment (e.g. rockslide flash flood volcanic eruption)
+Monster (e.g. wolf roc wyvern)
+Ally (i.e. PC friendly NPC)
+
+encounter environment
+Obstruction (e.g. wall)
+Choke Point (e.g. door)
+Obscurement (e.g. fog shroud darkness curtains smoke)
+Obstacle (e.g. pit ravine portcullis arrow slit chasm river)
+Hazard (e.g. fire lava acid swinging blades boiling mud stinging vines)
+Trap (e.g. pit trap needle trap arrow trap)
+Difficult Terrain (e.g. rubble broken floors deep water thick mud underbrush)
+Prop (e.g. tables chairs crates chandeliers)
+Cover (e.g. statues pillars trees boulders)
+Atmosphere (e.g. anti-magic field weather conditions)
+
+encounter complication
+An ally appears
+An enemy appears
+A third-party appears
+An enemy powers up
+An ally is weakened
+The encounter’s goal changes
+The encounter’s environment changes
+A countdown begins
+
+encounter highlight
+Fighting style (e.g. a tanky fighter locking down a crowded choke point)
+Weapon type (e.g. an evocation mage demolishing twig blights with the Fireball spell)
+Language spoken (e.g. a bard negotiating in Undercommon with a Drow enemy)
+Skills used (e.g. a Barbarian using their Athletics to push a boulder onto a dragon)
+Backstory (e.g. a mysterious enemy being revealed as a character from a PC’s past)
+Equipment owned (e.g. a rogue using their climbing kit to sneak over the estate’s wall)
+
+encounter surprise
+Concealed location (e.g. secret door)
+Hidden item (e.g. hidden treasure)
+Unknown weakness (e.g. vulnerability or immunity)
+Unidentified or concealed enemy
+
+encounter reward
+Treasure (e.g. gold artwork weaponry gems)
+Magic (e.g. potions wands enchantments)
+Knowledge (e.g. solutions to puzzles answers to questions)
+Location (e.g. access to new areas)
+Relationship (e.g. new friendships)
+Plot Development (e.g. character arc progress backstory relevance)
