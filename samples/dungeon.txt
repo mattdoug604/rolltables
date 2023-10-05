@@ -1,4 +1,0 @@
-Dungeon Location: {dungeon location}
-Dungeon Creator:  {dungeon creator}
-Dungeon Purpose:  {dungeon purpose}
-Dungeon History:  {dungeon history}

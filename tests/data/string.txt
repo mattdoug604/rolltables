@@ -1,1 +1,0 @@
-The dungeon was made by {creator}, and hides {treasure}!

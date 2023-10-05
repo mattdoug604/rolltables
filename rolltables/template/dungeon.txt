@@ -1,0 +1,9 @@
+Dungeon
+
+Location: {dungeon_location}
+Creator:  {dungeon_creator}
+Purpose:  {dungeon_purpose}
+History:  {dungeon_history}
+
+Dominant inhabitant: {monster_type}
+Secondary inhabitant: {monster_type}
