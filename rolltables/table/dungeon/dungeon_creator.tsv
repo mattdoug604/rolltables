@@ -1,12 +1,12 @@
 #Dungeon Creator
 d20 	Creator
 1 	Beholder
-2–4 	{Cults or Religious Groups}
+2–4 	{{ cults_and_religious_groups.roll() }}
 5–8 	Dwarves
 9 	Elves (including drow)
 10 	Giants
 11 	Hobgoblins
-12–15 	{NPC Alignment} Human {NPC Class}
+12–15 	{{ npc_alignment.roll() }} Human {{ npc_class.roll() }}
 16 	Kuo-toa
 17 	Lich
 18 	Mind flayers

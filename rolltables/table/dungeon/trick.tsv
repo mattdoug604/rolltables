@@ -1,0 +1,3 @@
+#Tricks
+d1	Trick
+1	{{ trick_object.roll() }}; {{ trick_effect.roll() }}

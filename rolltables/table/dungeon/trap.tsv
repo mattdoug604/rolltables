@@ -1,0 +1,3 @@
+#Traps
+d1	Trap
+1	{{ trap_effect.roll() }}; Trigger: {{ trap_trigger.roll() }}; Severity: {{ trap_severity.roll() }}

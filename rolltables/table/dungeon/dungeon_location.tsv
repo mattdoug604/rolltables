@@ -23,4 +23,4 @@ d100 	Location
 83–86 	On a promontory
 87–90 	On an island
 91–95 	Underwater
-96–00 	{Exotic Location}
+96–00 	{{ dungeon_exotic_location.roll() }}

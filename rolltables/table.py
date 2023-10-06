@@ -2,49 +2,11 @@ from __future__ import annotations
 
 from pathlib import Path
 from random import randint
-from typing import Dict, List
+from typing import Dict, List, Set
 
 from .utils import normalize_name
 
 MISSING = "<missing>"
-
-
-class TableMap:
-    @classmethod
-    def find_tables(cls, directory: Path | str) -> List[Path]:
-        if isinstance(directory, Path):
-            dirobj = directory
-        else:
-            dirobj = Path(directory)
-
-        tables = sorted(dirobj.rglob("*.tsv"))
-
-        return tables
-
-    @classmethod
-    def load(cls, directory: Path | str) -> TableMap:
-        tables = {}
-
-        for path in cls.find_tables(directory):
-            table = Table.load(path)
-            table_name = normalize_name(table.name)
-            assert table_name not in tables
-            tables[table_name] = table
-
-        return TableMap(tables)
-
-    def __init__(self, tables: Dict[str, Table]):
-        self.tables = tables
-
-    def __getitem__(self, table_name: str) -> str:
-        return self.roll(table_name)
-
-    def roll(self, table_name: str) -> str:
-        table_name = normalize_name(table_name)
-        table = self.tables[table_name]
-        choice = table.roll()
-
-        return choice
 
 
 class Table:
@@ -105,7 +67,7 @@ class Table:
             die = max(choices)
 
         if name is None:
-            name = normalize_name(fileobj.name)
+            name = normalize_name(fileobj.stem)
 
         return Table(name, die, choices)
 
@@ -113,9 +75,46 @@ class Table:
         self.name = name
         self.die = die
         self.choices = choices
+        self.last: str | None = None
+        self.previous: Set[str] = set()
 
-    def roll(self) -> str:
+    def roll(self, no_repeat: bool = False) -> str:
         roll = randint(1, self.die)
         choice = self.choices[roll]
+        self.last = choice
+
+        if no_repeat and choice in self.previous:
+            if len(self.previous) == len(self.choices):
+                return ""
+            else:
+                choice = self.roll(no_repeat=no_repeat)
+
+        self.previous.add(choice)
 
         return choice
+
+
+def find_tables(directory: Path | str) -> List[Path]:
+    if isinstance(directory, Path):
+        dirobj = directory
+    else:
+        dirobj = Path(directory)
+
+    tables = sorted(dirobj.rglob("*.tsv"))
+
+    return tables
+
+
+def load_tables(directory: Path | str) -> Dict[str, Table]:
+    tables = {}
+
+    for path in find_tables(directory):
+        table = Table.load(path)
+        table_name = normalize_name(table.name)
+        path_name = normalize_name(path.stem)
+        assert table_name not in tables
+        assert path_name not in tables
+        tables[table_name] = table
+        tables[path_name] = table
+
+    return tables

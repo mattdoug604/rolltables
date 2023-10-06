@@ -1,0 +1,11 @@
+#Current Chamber State
+d20 	Features
+1–3 	Rubble, ceiling partially collapsed
+4–5 	Holes, floor partially collapsed
+6–7 	Ashes, contents mostly burned
+8–9 	Used as a campsite
+10–11 	Pool of water; chamber’s original contents are water damaged
+12–16 	Furniture wrecked but still present
+17–18 	Converted to {{ room_purpose_general.roll() }}
+19 	Stripped bare
+20 	Pristine and in original state

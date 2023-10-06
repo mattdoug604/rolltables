@@ -1,0 +1,16 @@
+#Dungeon Chamber Contents
+d100 	Contents
+01–08 	Monster (dominant inhabitant)
+09–15 	Monster (dominant inhabitant) with treasure
+16–27 	Monster (pet or allied creature)
+28–33 	Monster (pet or allied creature) guarding treasure
+34–42 	Monster (random creature)
+43–50 	Monster (random creature) with treasure
+51–58 	{{ room_hazards.roll() }} with incidental treasure
+59–63 	{{ room_obstacles.roll() }}
+64–73 	{{ trap.roll() }}
+74–76 	{{ trap.roll() }}, protecting treasure
+77–80 	{{ trick.roll() }}
+81–88 	Empty room
+89–94 	Empty room with {{ room_hazards.roll() }}
+95–00 	Empty room with treasure
