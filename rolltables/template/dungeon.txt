@@ -10,6 +10,49 @@ Creatures
 Dominant:  {{ monster_type.roll() }}
 Secondary: {{ monster_type.roll() }}
 
+Encounter 1: Entrance with Guardian
+Objective:  {{ encounter_1.roll() }}
+Goal:  {{ encounter_goal.roll() }}
+Adversary:  {{ encounter_adversary.roll() }}
+Environment:  {{ encounter_environment.roll() }}
+Complication:  {{ encounter_complication.roll() }}
+Highlight:  {{ encounter_highlight.roll() }}
+Surprise:  {{ encounter_surprise.roll() }}
+Reward:  {{ encounter_reward.roll() }}
+
+Encounter 2: Puzzle or Roleplay Challenge
+Objective:  {{ encounter_2.roll() }}
+Goal:  {{ encounter_goal.roll() }}
+Adversary:  {{ encounter_adversary.roll() }}
+Environment:  {{ encounter_environment.roll() }}
+Complication:  {{ encounter_complication.roll() }}
+Highlight:  {{ encounter_highlight.roll() }}
+Surprise:  {{ encounter_surprise.roll() }}
+Reward:  {{ encounter_reward.roll() }}
+
+Encounter 3: Trick or Setback
+Objective:  {{ encounter_3.roll() }}
+Goal:  {{ encounter_goal.roll() }}
+Adversary:  {{ encounter_adversary.roll() }}
+Environment:  {{ encounter_environment.roll() }}
+Complication:  {{ encounter_complication.roll() }}
+Highlight:  {{ encounter_highlight.roll() }}
+Surprise:  {{ encounter_surprise.roll() }}
+Reward:  {{ encounter_reward.roll() }}
+
+Encounter 4: Big Climax
+Objective:  {{ encounter_4.roll() }}
+Goal:  {{ encounter_goal.roll() }}
+Adversary:  {{ encounter_adversary.roll() }}
+Environment:  {{ encounter_environment.roll() }}
+Complication:  {{ encounter_complication.roll() }}
+Highlight:  {{ encounter_highlight.roll() }}
+Surprise:  {{ encounter_surprise.roll() }}
+Reward:  {{ encounter_reward.roll() }}
+
+Encounter 5: Reward, Revelation
+{{ encounter_5.roll() }}
+
 {% for n in range(1, 6) -%}
 Room #{{ n }}
 {% if dungeon_purpose.last == "Death trap" -%}
@@ -31,7 +74,7 @@ Room #{{ n }}
 {% elif dungeon_purpose.last == "Treasure vault" -%}
     Purpose:   {{ room_purpose_treasure_vault.roll(no_repeat=True) }}
 {% else -%}
-    Purpose:   Unknown
+    Purpose:   {{ room_purpose_general.roll(no_repeat=True) }}
 {% endif -%}
 State:     {{ room_state.roll() }}
 Contents:  {{ room_contents.roll() }}

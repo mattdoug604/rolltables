@@ -1,0 +1,11 @@
+#Encounter Environment
+1	Obstruction (e.g., wall)
+2	Choke Point (e.g., door)
+3	Obscurement (e.g., fog, shroud, darkness, curtains, smoke)
+4	Obstacle (e.g., pit, ravine, portcullis, arrow slit, chasm, river)
+5	Hazard (e.g., fire, lava, acid, swinging blades, boiling mud, stinging vines)
+6	Trap (e.g., pit trap, needle trap, arrow trap)
+7	Difficult Terrain (e.g., rubble, broken floors, deep water, thick mud, underbrush)
+8	Prop (e.g., tables, chairs, crates, chandeliers)
+9	Cover (e.g., statues, pillars, trees, boulders)
+10	Atmosphere (e.g., anti-magic field, weather conditions)
